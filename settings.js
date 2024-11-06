@@ -1,6 +1,7 @@
 module.exports = {
-    flowFile: 'flows/defaults.json',
-    credentialSecret: process.env.NODE_RED_CREDENTIAL_SECRET || 'a-secret-key',
+    uiPort: process.env.PORT || 1880,
+    httpAdminRoot: '/admin',
+    httpStatic: 'public',
     
     adminAuth: {
         type: "credentials",
@@ -11,29 +12,19 @@ module.exports = {
         }]
     },
 
-    // Node-RED settings
-    uiPort: process.env.PORT || 1880,
-    httpAdminRoot: '/admin',
-    httpStatic: 'public',
+    // Disable editor authentication for testing
+    disableEditor: false,
     
-    // Function node settings
-    functionGlobalContext: {
-        // Enable access to environment variables in function nodes
-        process: process
-    },
-    
-    // Security settings
-    editorTheme: {
-        projects: {
-            enabled: true
-        }
+    // Required for Railway
+    httpServerOptions: {
+        'max-old-space-size': '256'
     },
 
-    // Custom node settings
-    nodesDir: './nodes',
-    
-    // Secure HTTP settings
-    https: {
-        enabled: process.env.HTTPS === 'true'
+    functionGlobalContext: {},
+
+    // Enable CORS
+    httpNodeCors: {
+        origin: "*",
+        methods: ["GET", "PUT", "POST", "DELETE"]
     }
 };
