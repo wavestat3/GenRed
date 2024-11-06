@@ -11,10 +11,8 @@
     "node-red": "^3.1.0",
     "node-red-dashboard": "^3.6.0",
     "@node-red/nodes": "^3.1.0",
-    "node-red-contrib-ai": "^0.6.0",
-    "node-red-contrib-openai": "^2.1.0",
-    "node-red-contrib-anthropic": "^1.0.0",
-    "node-red-contrib-huggingface": "^1.0.0"
+    "node-red-contrib-openai-edge": "^0.5.0",
+    "node-red-contrib-cloud-api": "^1.0.0"
   },
   "engines": {
     "node": "18.x"
