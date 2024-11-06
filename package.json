@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "AI-powered document processing platform built with Node-RED",
   "scripts": {
-    "start": "node-red -s settings.js",
-    "dev": "node-red -s settings.js -v"
+    "start": "node-red",
+    "dev": "node-red -v"
   },
   "dependencies": {
-    "node-red": "^3.1.0",
-    "@node-red/nodes": "^3.1.0"
+    "node-red": "3.1.0",
+    "@node-red/nodes": "3.1.0"
   },
   "engines": {
     "node": "18.x"
-  },
-  "author": "",
-  "license": "MIT"
+  }
 }
