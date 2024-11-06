@@ -1,0 +1,24 @@
+{
+  "name": "nodered-ai-platform",
+  "version": "1.0.0",
+  "description": "AI-powered document processing platform built with Node-RED",
+  "scripts": {
+    "start": "node-red -s settings.js",
+    "dev": "node-red -s settings.js -v",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-red": "^3.1.0",
+    "node-red-dashboard": "^3.6.0",
+    "@node-red/nodes": "^3.1.0",
+    "node-red-contrib-ai": "^0.6.0",
+    "node-red-contrib-openai": "^2.1.0",
+    "node-red-contrib-anthropic": "^1.0.0",
+    "node-red-contrib-huggingface": "^1.0.0"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "author": "",
+  "license": "MIT"
+}
