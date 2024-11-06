@@ -10,9 +10,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p /data
-
 # Expose port
 EXPOSE 1880
 
