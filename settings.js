@@ -1,4 +1,5 @@
 module.exports = {
+    uiHost: "0.0.0.0",  // Important: bind to all interfaces
     uiPort: process.env.PORT || 1880,
     httpAdminRoot: '/admin',
     httpStatic: 'public',
@@ -12,19 +13,20 @@ module.exports = {
         }]
     },
 
-    // Disable editor authentication for testing
-    disableEditor: false,
-    
-    // Required for Railway
-    httpServerOptions: {
-        'max-old-space-size': '256'
-    },
+    flowFile: 'flows.json',
+    userDir: './data',
 
     functionGlobalContext: {},
 
-    // Enable CORS
+    exportGlobalContextKeys: false,
+
     httpNodeCors: {
         origin: "*",
-        methods: ["GET", "PUT", "POST", "DELETE"]
+        methods: "GET,PUT,POST,DELETE"
+    },
+
+    // Avoid memory issues
+    httpServerOptions: {
+        'max-old-space-size': '256'
     }
 };
