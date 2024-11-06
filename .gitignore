@@ -1,0 +1,10 @@
+node_modules/
+npm-debug.log
+.DS_Store
+.env
+*.backup
+.config.json
+.config.json.backup
+flows_cred.json
+flows.json.backup
+package-lock.json
